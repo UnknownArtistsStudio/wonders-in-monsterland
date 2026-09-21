@@ -39,7 +39,7 @@
           <span class="brand__title" aria-hidden="true">Wonders in Monsterland</span>
         </header>
         <div class="scene" aria-label="Interactive Stockport music scene">
-          <video class="scene__video" src="assets/stockport-window-seamless.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <video class="scene__video" src="assets/stockport-window-seamless-static.mp4" autoplay muted loop playsinline preload="auto"></video>
           <button class="music-window" data-scene="1" type="button" aria-label="Open the music in the flashing shop window" aria-pressed="false" style="--hotspot-left: 44.65%; --hotspot-top: 40.75%; --hotspot-width: 13.82%; --hotspot-height: 30.9%;">
             <span class="sr-only">Hold the pointer here to hear the full track.</span>
           </button>
@@ -68,8 +68,22 @@
         </header>
         <div class="scene" aria-label="Interactive abandoned factory music scene">
           <video class="scene__video" src="assets/factory-window-seamless.mp4" autoplay muted loop playsinline preload="auto"></video>
-          <button class="music-window" data-scene="3" type="button" aria-label="Open the music in the broken factory windows" aria-pressed="false" style="--hotspot-left: 46.72%; --hotspot-top: 47.59%; --hotspot-width: 8.44%; --hotspot-height: 10.19%; --hotspot-clip: polygon(1.2% 10%, 98.1% 0, 100% 90.9%, 0 100%);">
+          <button class="music-window" data-scene="3" type="button" aria-label="Open the music in the broken factory windows" aria-pressed="false" style="--hotspot-left: 26.09%; --hotspot-top: 47.50%; --hotspot-width: 8.28%; --hotspot-height: 15.00%; --hotspot-clip: polygon(2.5% 4.3%, 98.1% 0, 100% 94.4%, 0 100%);">
             <span class="sr-only">Hold the pointer here to hear the full track.</span>
+          </button>
+          <div class="scene__grain" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="scene-page" data-scene="4">
+        <header class="brand">
+          <span class="brand__mask brand__mask--caravan" aria-hidden="true"></span>
+          <span class="brand__title" aria-hidden="true">Wonders in Monsterland</span>
+        </header>
+        <div class="scene" aria-label="Interactive frosty caravan park music scene">
+          <video class="scene__video" src="assets/caravan-window-seamless.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <button class="music-window" data-scene="4" type="button" aria-label="Open the music in the two windows on the second caravan" aria-pressed="false" style="--hotspot-left: 29.38%; --hotspot-top: 33.06%; --hotspot-width: 11.46%; --hotspot-height: 6.67%; --hotspot-clip: polygon(0 0, 16% 0, 16% 2%, 66% 2%, 66% 0, 100% 0, 100% 100%, 66% 100%, 66% 98%, 16% 98%, 16% 100%, 0 100%);">
+            <span class="sr-only">Hold the pointer over either window to hear the full track.</span>
           </button>
           <div class="scene__grain" aria-hidden="true"></div>
         </div>
@@ -95,6 +109,7 @@
     <audio class="track" data-scene="1" data-loop-start="92.16" data-loop-end="215.04" src="assets/earth-people-125.mp3" loop preload="auto"></audio>
     <audio class="track" data-scene="2" data-loop-start="84.71" data-loop-end="211.77" src="assets/momwim-136.mp3" loop preload="auto"></audio>
     <audio class="track" data-scene="3" data-loop-start="37.50" data-loop-end="181.50" src="assets/sherrick-130.mp3" loop preload="auto"></audio>
+    <audio class="track" data-scene="4" data-loop-start="160.50" data-loop-end="330.82" src="assets/send-your-word-124.mp3" loop preload="auto"></audio>
     <script src="script.js"></script>
   </body>
 </html>

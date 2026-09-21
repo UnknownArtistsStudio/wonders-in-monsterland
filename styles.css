@@ -46,7 +46,7 @@ body * {
 }
 
 .world {
-  min-height: 400svh;
+  min-height: 500svh;
 }
 
 .scene-page {
@@ -278,7 +278,7 @@ body * {
 
 @media (max-width: 700px) {
   .world {
-    min-height: 400svh;
+    min-height: 500svh;
   }
 
   .scene-page {
