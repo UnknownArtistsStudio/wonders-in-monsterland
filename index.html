@@ -40,7 +40,7 @@
         </header>
         <div class="scene" aria-label="Interactive Stockport music scene">
           <video class="scene__video" src="assets/stockport-window-seamless-static.mp4" autoplay muted loop playsinline preload="auto"></video>
-          <button class="music-window" data-scene="1" type="button" aria-label="Open the music in the flashing shop window" aria-pressed="false" style="--hotspot-left: 44.65%; --hotspot-top: 40.75%; --hotspot-width: 13.82%; --hotspot-height: 30.9%;">
+          <button class="music-window" data-scene="1" type="button" aria-label="Open the music in the flashing shop window" aria-pressed="false" style="--hotspot-left: 43.49%; --hotspot-top: 36.85%; --hotspot-width: 10.00%; --hotspot-height: 28.33%; --hotspot-clip: polygon(0 3.3%, 100% 0, 97.4% 100%, 0.5% 97.1%);">
             <span class="sr-only">Hold the pointer here to hear the full track.</span>
           </button>
           <div class="scene__grain" aria-hidden="true"></div>
@@ -88,6 +88,20 @@
           <div class="scene__grain" aria-hidden="true"></div>
         </div>
       </section>
+
+      <section class="scene-page" data-scene="5">
+        <header class="brand">
+          <span class="brand__mask brand__mask--forest" aria-hidden="true"></span>
+          <span class="brand__title" aria-hidden="true">Wonders in Monsterland</span>
+        </header>
+        <div class="scene" aria-label="Interactive misty woodland music scene">
+          <video class="scene__video" src="assets/forest-mist-seamless.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <button class="music-window" data-scene="5" type="button" aria-label="Open the music in the distant lights through the mist" aria-pressed="false" style="--hotspot-left: 49.35%; --hotspot-top: 46.65%; --hotspot-width: 2.85%; --hotspot-height: 4.10%; --hotspot-clip: ellipse(50% 50% at 50% 50%);">
+            <span class="sr-only">Move toward the distant lights to clear the echo and hear the full track.</span>
+          </button>
+          <div class="scene__grain" aria-hidden="true"></div>
+        </div>
+      </section>
     </main>
 
     <div id="window-pointer" class="window-pointer" aria-hidden="true"></div>
@@ -110,6 +124,7 @@
     <audio class="track" data-scene="2" data-loop-start="84.71" data-loop-end="211.77" src="assets/momwim-136.mp3" loop preload="auto"></audio>
     <audio class="track" data-scene="3" data-loop-start="37.50" data-loop-end="181.50" src="assets/sherrick-130.mp3" loop preload="auto"></audio>
     <audio class="track" data-scene="4" data-loop-start="160.50" data-loop-end="330.82" src="assets/send-your-word-124.mp3" loop preload="auto"></audio>
+    <audio class="track" data-scene="5" data-loop-start="245.24" data-loop-end="397.62" src="assets/lookin-up-126.mp3" loop preload="auto"></audio>
     <script src="script.js"></script>
   </body>
 </html>
