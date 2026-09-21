@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050606" />
+    <meta
+      name="description"
+      content="Wonders in Monsterland — interactive windows into music."
+    />
+    <title>Wonders in Monsterland</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050606'/%3E%3Cpath d='M8 7h16v19H8z' fill='%23101515' stroke='%23d6fffa' stroke-width='1.5'/%3E%3Cpath d='M10 9h12v15H10z' fill='%2379e6df'/%3E%3Cpath d='M10 16c4-5 8 5 12 0v8H10z' fill='%23d98cff'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="world">
+      <section class="scene-page" data-scene="0">
+        <header class="brand">
+          <span class="brand__mask brand__mask--car" aria-hidden="true"></span>
+          <span class="sr-only">Wonders in Monsterland</span>
+        </header>
+        <div class="scene" aria-label="Interactive Werneth Low lane music scene">
+          <video class="scene__video" src="assets/werneth-carpark-seamless.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <button class="music-window" data-scene="0" type="button" aria-label="Open the music in the misty rear window" aria-pressed="false" style="--hotspot-left: 34.79%; --hotspot-top: 48.80%; --hotspot-width: 5.73%; --hotspot-height: 3.15%; --hotspot-clip: polygon(4.5% 0, 97.3% 3%, 100% 100%, 0 97%);">
+            <span class="sr-only">Hold the pointer here to hear the full track.</span>
+          </button>
+          <div class="scene__grain" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="scene-page" data-scene="1">
+        <header class="brand">
+          <span class="brand__mask brand__mask--shop" aria-hidden="true"></span>
+        </header>
+        <div class="scene" aria-label="Interactive Stockport music scene">
+          <video class="scene__video" src="assets/stockport-window-seamless.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <button class="music-window" data-scene="1" type="button" aria-label="Open the music in the flashing shop window" aria-pressed="false" style="--hotspot-left: 44.65%; --hotspot-top: 40.75%; --hotspot-width: 13.82%; --hotspot-height: 30.9%;">
+            <span class="sr-only">Hold the pointer here to hear the full track.</span>
+          </button>
+          <div class="scene__grain" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="scene-page" data-scene="2">
+        <header class="brand">
+          <span class="brand__mask brand__mask--flats" aria-hidden="true"></span>
+        </header>
+        <div class="scene" aria-label="Interactive Lancashire Hill tower-block music scene">
+          <video class="scene__video" src="assets/lancashire-hill-window-seamless.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <button class="music-window" data-scene="2" type="button" aria-label="Open the music in the two illuminated tower-block windows" aria-pressed="false" style="--hotspot-left: 11.05%; --hotspot-top: 37.4%; --hotspot-width: 8.3%; --hotspot-height: 5.75%; --hotspot-clip: polygon(0 0, 100% 0, 100% 100%, 0 100%);">
+            <span class="sr-only">Hold the pointer here to hear the full track.</span>
+          </button>
+          <div class="scene__grain" aria-hidden="true"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="window-pointer" class="window-pointer" aria-hidden="true"></div>
+
+    <button id="enter" class="enter" type="button" aria-label="Enter Monsterland with sound">
+      <span class="enter__logo" aria-hidden="true">
+        <span class="enter__slice" style="--slice-top: 0%; --slice-bottom: 87.5%; --slice-delay: 0ms; --slice-travel: -145%;"><img src="assets/wim-logo-white.png" alt="" /></span>
+        <span class="enter__slice" style="--slice-top: 12.5%; --slice-bottom: 75%; --slice-delay: 55ms; --slice-travel: 138%;"><img src="assets/wim-logo-white.png" alt="" /></span>
+        <span class="enter__slice" style="--slice-top: 25%; --slice-bottom: 62.5%; --slice-delay: 110ms; --slice-travel: -132%;"><img src="assets/wim-logo-white.png" alt="" /></span>
+        <span class="enter__slice" style="--slice-top: 37.5%; --slice-bottom: 50%; --slice-delay: 165ms; --slice-travel: 152%;"><img src="assets/wim-logo-white.png" alt="" /></span>
+        <span class="enter__slice" style="--slice-top: 50%; --slice-bottom: 37.5%; --slice-delay: 220ms; --slice-travel: -139%;"><img src="assets/wim-logo-white.png" alt="" /></span>
+        <span class="enter__slice" style="--slice-top: 62.5%; --slice-bottom: 25%; --slice-delay: 275ms; --slice-travel: 132%;"><img src="assets/wim-logo-white.png" alt="" /></span>
+        <span class="enter__slice" style="--slice-top: 75%; --slice-bottom: 12.5%; --slice-delay: 330ms; --slice-travel: -153%;"><img src="assets/wim-logo-white.png" alt="" /></span>
+        <span class="enter__slice" style="--slice-top: 87.5%; --slice-bottom: 0%; --slice-delay: 385ms; --slice-travel: 142%;"><img src="assets/wim-logo-white.png" alt="" /></span>
+      </span>
+    </button>
+
+    <audio class="track" data-scene="0" data-loop-start="245.85" data-loop-end="386.34" src="assets/only-one-123.mp3" loop preload="auto"></audio>
+    <audio class="track" data-scene="1" data-loop-start="92.16" data-loop-end="215.04" src="assets/earth-people-125.mp3" loop preload="auto"></audio>
+    <audio class="track" data-scene="2" data-loop-start="84.71" data-loop-end="211.77" src="assets/momwim-136.mp3" loop preload="auto"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
