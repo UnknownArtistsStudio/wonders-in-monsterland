@@ -61,7 +61,7 @@ body * {
 }
 
 .brand {
-  width: min(94vw, calc((100svh - 7rem) * 16 / 9), 1500px);
+  width: min(78vw, calc((100svh - 10rem) * 16 / 9), 1180px);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -92,7 +92,7 @@ body * {
 
 .scene {
   position: relative;
-  width: min(94vw, calc((100svh - 7rem) * 16 / 9), 1500px);
+  width: min(78vw, calc((100svh - 10rem) * 16 / 9), 1180px);
   aspect-ratio: 16 / 9;
   margin: auto;
   overflow: hidden;
@@ -289,7 +289,7 @@ body * {
 
   .brand,
   .scene {
-    width: 100%;
+    width: 92%;
   }
 
   .brand__mask {

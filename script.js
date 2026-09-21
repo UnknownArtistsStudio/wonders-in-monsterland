@@ -61,16 +61,12 @@ function setProximity(sceneIndex, proximity, immediate = false) {
   const duration = immediate ? 0.01 : 0.09;
   const frequency = LOW_FREQUENCY * ((OPEN_FREQUENCY / LOW_FREQUENCY) ** amount);
   const volume = QUIET_GAIN + (OPEN_GAIN - QUIET_GAIN) * amount;
-  const echo = 0.36 * ((1 - amount) ** 1.55);
   channel.filter.frequency.cancelScheduledValues(now);
   channel.filter.frequency.setValueAtTime(Math.max(20, channel.filter.frequency.value), now);
   channel.filter.frequency.exponentialRampToValueAtTime(frequency, now + duration);
   channel.windowGain.gain.cancelScheduledValues(now);
   channel.windowGain.gain.setValueAtTime(channel.windowGain.gain.value, now);
   channel.windowGain.gain.linearRampToValueAtTime(volume, now + duration);
-  channel.echoWet.gain.cancelScheduledValues(now);
-  channel.echoWet.gain.setValueAtTime(channel.echoWet.gain.value, now);
-  channel.echoWet.gain.linearRampToValueAtTime(echo, now + duration);
 }
 
 function setFilter(sceneIndex, open, immediate = false) {
@@ -150,24 +146,13 @@ async function startExperience() {
     const filter = audioContext.createBiquadFilter();
     const windowGain = audioContext.createGain();
     const level = audioContext.createGain();
-    const delay = audioContext.createDelay(1);
-    const feedback = audioContext.createGain();
-    const echoWet = audioContext.createGain();
     filter.type = "lowpass";
     filter.Q.value = 0.8;
     filter.frequency.value = LOW_FREQUENCY;
     windowGain.gain.value = QUIET_GAIN;
     level.gain.value = index === activeScene ? 1 : 0;
-    delay.delayTime.value = 0.31;
-    feedback.gain.value = 0.28;
-    echoWet.gain.value = 0.36;
-    source.connect(filter).connect(windowGain);
-    windowGain.connect(level);
-    windowGain.connect(delay);
-    delay.connect(feedback).connect(delay);
-    delay.connect(echoWet).connect(level);
-    level.connect(audioContext.destination);
-    return { filter, windowGain, level, echoWet };
+    source.connect(filter).connect(windowGain).connect(level).connect(audioContext.destination);
+    return { filter, windowGain, level };
   });
 
   await audioContext.resume();
