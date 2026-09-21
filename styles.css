@@ -77,6 +77,19 @@ body * {
   mask: url("assets/wim-logo-white.png") left center / contain no-repeat;
 }
 
+.brand__title {
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.30);
+  font-size: clamp(0.62rem, 0.82vw, 0.82rem);
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.45rem rgba(225, 238, 236, 0.20);
+  -webkit-backdrop-filter: blur(3px) saturate(0.72) brightness(1.12);
+  backdrop-filter: blur(3px) saturate(0.72) brightness(1.12);
+}
+
 .scene {
   position: relative;
   width: min(94vw, calc((100svh - 7rem) * 16 / 9), 1500px);
