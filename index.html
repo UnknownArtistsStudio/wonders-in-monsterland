@@ -57,6 +57,19 @@
           <div class="scene__grain" aria-hidden="true"></div>
         </div>
       </section>
+
+      <section class="scene-page" data-scene="3">
+        <header class="brand">
+          <span class="brand__mask brand__mask--factory" aria-hidden="true"></span>
+        </header>
+        <div class="scene" aria-label="Interactive abandoned factory music scene">
+          <video class="scene__video" src="assets/factory-window-seamless.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <button class="music-window" data-scene="3" type="button" aria-label="Open the music in the broken factory windows" aria-pressed="false" style="--hotspot-left: 55.78%; --hotspot-top: 43.15%; --hotspot-width: 9.48%; --hotspot-height: 17.50%; --hotspot-clip: polygon(0.6% 4.8%, 97.8% 0, 100% 98.9%, 0 100%);">
+            <span class="sr-only">Hold the pointer here to hear the full track.</span>
+          </button>
+          <div class="scene__grain" aria-hidden="true"></div>
+        </div>
+      </section>
     </main>
 
     <div id="window-pointer" class="window-pointer" aria-hidden="true"></div>
@@ -77,6 +90,7 @@
     <audio class="track" data-scene="0" data-loop-start="245.85" data-loop-end="386.34" src="assets/only-one-123.mp3" loop preload="auto"></audio>
     <audio class="track" data-scene="1" data-loop-start="92.16" data-loop-end="215.04" src="assets/earth-people-125.mp3" loop preload="auto"></audio>
     <audio class="track" data-scene="2" data-loop-start="84.71" data-loop-end="211.77" src="assets/momwim-136.mp3" loop preload="auto"></audio>
+    <audio class="track" data-scene="3" data-loop-start="37.50" data-loop-end="181.50" src="assets/sherrick-130.mp3" loop preload="auto"></audio>
     <script src="script.js"></script>
   </body>
 </html>
